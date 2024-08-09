@@ -7,7 +7,7 @@ const Footer = () => {
         </h3>
         <hr className='border-t-2 border-[#3D56D9] w-full' />
       </div>
-      <p>
+      <p className='text-center text-sm text-[#686868] text-opacity-70'>
         Designed by Kleopatra Emmanouil, developed by Dimosthenis Emmanouil
         @2024{' '}
       </p>
