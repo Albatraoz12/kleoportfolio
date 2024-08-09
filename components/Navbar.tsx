@@ -19,7 +19,7 @@ const Links: LinkItem[] = [
   {
     id: 1,
     name: 'Work',
-    url: '/work',
+    url: '/',
   },
   {
     id: 2,
@@ -47,15 +47,15 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <ul className='flex items-center gap-4'>
+        <ul className='flex items-center justify-center gap-4'>
           {Links.map((link) => (
             <li key={link.id} className={workSans.className}>
               <Link
                 href={link.url}
-                className={`p-2 ${
+                className={`p-1 px-3 rounded-sm transition-all duration-300 ease-in-out ${
                   pathname === link.url
-                    ? 'border border-[#3D56D9] px-3 rounded-sm'
-                    : ''
+                    ? 'outline outline-2 outline-[#3D56D9]'
+                    : 'outline-none hover:outline-1 hover:outline-orange-400 hover:text-orange-400'
                 }`}
               >
                 {link.name}
