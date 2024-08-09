@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
-  weight: ['700'],
+  weight: ['700', '400'],
 });
 
 export const metadata: Metadata = {
