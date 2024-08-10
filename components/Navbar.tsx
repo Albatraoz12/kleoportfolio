@@ -55,7 +55,7 @@ const Navbar = () => {
                 className={`p-1 px-3 rounded-sm transition-all duration-300 ease-in-out ${
                   pathname === link.url
                     ? 'outline outline-2 outline-[#3D56D9]'
-                    : 'outline-none hover:outline-1 hover:outline-orange-400 hover:text-orange-400'
+                    : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
                 }`}
               >
                 {link.name}
