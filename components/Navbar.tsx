@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
-  weight: ['700'],
+  weight: ['500', '700'],
 });
 
 interface LinkItem {
@@ -58,22 +58,17 @@ const Navbar = () => {
         >
           {isMenuOpen ? (
             <svg
-              className='w-10 h-10'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
+              className='w-6 h-6'
               xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 448 512'
+              fill='#3D56D9'
+              stroke='currentColor'
             >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M6 18L18 6M6 6l12 12'
-              />
+              <path d='M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z' />
             </svg>
           ) : (
             <svg
-              className='w-10 h-10'
+              className='w-6 h-6'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 448 512'
               fill='#3D56D9'
@@ -85,16 +80,16 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`fixed inset-0 w-full h-full bg-white z-10 flex flex-col items-center justify-center transition-transform duration-300 ${
+        className={`fixed inset-0 w-full h-full bg-white z-10 flex flex-col justify-start  items-center transition-transform duration-300 ${
           isMenuOpen ? 'transform translate-y-0' : 'transform -translate-y-full'
         } md:hidden`}
       >
-        <ul className='flex flex-col items-center gap-6'>
+        <ul className='flex flex-col mt-52 items-center gap-11'>
           {Links.map((link) => (
             <li key={link.id} className={workSans.className}>
               <Link
                 href={link.url}
-                className={`text-2xl p-3 rounded-sm transition-all duration-300 ease-in-out ${
+                className={`text-lg font-medium  p-3 rounded-sm transition-all duration-300 ease-in-out ${
                   pathname === link.url
                     ? 'outline outline-2 outline-[#3D56D9]'
                     : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
