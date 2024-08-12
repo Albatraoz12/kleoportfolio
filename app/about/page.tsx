@@ -3,21 +3,24 @@ import Link from 'next/link';
 
 export default function About() {
   return (
-    <main className='flex flex-col max-w-[1169px] max-h-[923px] gap-10 mx-auto text-[#3D56D9] h-[100%]'>
+    <main className='flex flex-col max-w-[1169px] mx-auto text-[#3D56D9] h-full p-4 md:p-0'>
       <div>
-        <h1 className='text-start text-2xl'>About Me</h1>
+        <h1 className='text-start text-2xl mx-3 mb-6'>About Me</h1>
       </div>
-      <section className='flex justify-center gap-10'>
-        <Image
-          className='max-w-[470px] max-h-[536px] h-[536px] object-cover'
-          src='/IMG_1848.JPG'
-          height={536}
-          width={470}
-          alt='A picture of Kleopatra with a smile on her face'
-        />
-        <article className='flex flex-col gap-10 ml-12'>
+      <section className='flex flex-col md:h-[536px] md:flex-row justify-center md:gap-0 md:mx-3 lg:gap-10'>
+        <figure className='flex-shrink-0 w-full max-w-full md:h-full md:max-w-[370px] lg:max-w-[470px] lg:max-h-[536px]'>
+          <Image
+            className='w-full object-cover'
+            src='/IMG_1848.JPG'
+            width={470}
+            height={536}
+            sizes='100vw'
+            alt='A picture of Kleopatra with a smile on her face'
+          />
+        </figure>
+        <article className='flex flex-col gap-6 md:gap-10 md:ml-12'>
           <div>
-            <h2 className='mb-3'>Hello!</h2>
+            <h2 className='my-3 md:my-0'>Hello!</h2>
             <p className='font-medium'>
               I am a UX/UI designer based in Stockholm. Passionate about
               understanding user needs and crafting exceptional interfaces. With
@@ -26,12 +29,12 @@ export default function About() {
               captivating and delightful experiences.
             </p>
           </div>
-          <div className='lg:mt-10'>
+          <div className='mt-4 md:mt-10'>
             <Link
               href='#'
-              className='bg-[#3D56D9] max-w-[306px] rounded-2xl text-white text-center p-1 px-4 font-thin'
+              className='bg-[#3D56D9] w-full md:w-auto max-w-[306px] rounded-2xl text-white text-center p-2 px-4 font-thin'
             >
-              Connect with me on Linkedin!
+              Connect with me on LinkedIn!
             </Link>
           </div>
         </article>
