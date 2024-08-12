@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className='text-lg'>Hello! I'm Kleopatra Emmanouil I, research</h1>
       </section>
       <section>
-        <figure className='flex gap-4'>
+        <figure className='flex flex-col gap-4'>
           <div className='relative group cursor-pointer'>
             <Image
               src='/case.png'
