@@ -1,12 +1,32 @@
+import { Space_Mono } from 'next/font/google';
 import Image from 'next/image';
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['700', '400'],
+});
 
 export default function Home() {
   return (
-    <main className='flex justify-center items-center flex-col mt-10 gap-8'>
-      <section>
-        <h1 className='text-base text-[#3D56D9] md:text-xl font-semibold leading-8 px-3'>
-          Hello! I'm Kleopatra I, research
-        </h1>
+    <main
+      className={`flex justify-center items-center flex-col mt-10 gap-8 ${spaceMono.className}`}
+    >
+      <section className='wrapper font-bold text-[#3D56D9] text-[26px]'>
+        <h2>Kleopatra, I</h2>
+        <div className='overflow-hidden h-[178px]'>
+          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
+            user test
+          </span>
+          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
+            prototype
+          </span>
+          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
+            wireframe
+          </span>
+          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
+            research
+          </span>
+        </div>
       </section>
       <section>
         <figure className='flex flex-col gap-4'>
