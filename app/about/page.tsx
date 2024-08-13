@@ -1,7 +1,5 @@
-// app/about/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import { workSans } from '../layout'; // Import the workSans font variable
 
 export default function About() {
   return (
@@ -19,9 +17,7 @@ export default function About() {
             alt='A picture of Kleopatra with a smile on her face'
           />
         </figure>
-        <article
-          className={`flex flex-col gap-6 md:gap-10 md:ml-5 ${workSans.variable}`}
-        >
+        <article className={`flex flex-col gap-6 md:gap-10 md:ml-5`}>
           <div>
             <h2 className='my-3 mb-5'>Hello!</h2>
             <p>

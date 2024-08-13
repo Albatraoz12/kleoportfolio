@@ -1,19 +1,12 @@
-// app/layout.tsx
 import type { Metadata } from 'next';
-import { Space_Mono, Work_Sans } from 'next/font/google';
+import { Space_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-export const spaceMono = Space_Mono({
+const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['700', '400'],
-});
-
-export const workSans = Work_Sans({
-  subsets: ['latin'],
-  weight: ['500', '700'],
-  variable: '--font-workSans',
 });
 
 export const metadata: Metadata = {
@@ -27,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={workSans.variable}>
+    <html lang='en'>
       <body className={`${spaceMono.className} min-h-screen`}>
         <Navbar />
         {children}
