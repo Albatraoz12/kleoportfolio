@@ -11,9 +11,9 @@ export default function Home() {
     <main
       className={`flex justify-center items-center flex-col mt-10 gap-8 ${spaceMono.className}`}
     >
-      <section className='wrapper font-bold text-[#3D56D9] text-[26px]'>
-        <h2>Kleopatra, I</h2>
-        <div className='overflow-hidden h-[178px]'>
+      <section className='wrapper font-bold text-[#3D56D9] text-[26px] h-[50px] flex gap-3'>
+        <h2>Hello! I’m Kleopatra, I</h2>
+        <div className='overflow-hidden'>
           <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
             user test
           </span>

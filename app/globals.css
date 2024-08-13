@@ -15,5 +15,5 @@
 .words span {
   display: block;
   height: 100%;
-  animation: 5s ease-in-out infinite spin_words;
+  animation: 2s ease-in-out infinite spin_words;
 }
