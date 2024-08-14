@@ -30,7 +30,9 @@ export default function About() {
           </div>
           <div className='mt-4 md:mt-10 w-full'>
             <Link
-              href='#'
+              href='https://www.linkedin.com/in/kleopatra-emmanouil/'
+              target='_blank'
+              rel='noopener noreferrer'
               className='bg-[#3D56D9] w-full md:w-auto max-w-[306px] rounded-2xl text-white text-center p-2 px-3 md:px-[1px] md:py-2 lg:p-2 lg:px-3 font-thin'
             >
               Connect with me on LinkedIn!
