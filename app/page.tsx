@@ -11,7 +11,6 @@ const spaceMono = Space_Mono({
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const words = ['research', 'wireframe', 'prototype', 'user test'];
   const wordsL: any[] = [
     {
       title: 'research',
