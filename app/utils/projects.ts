@@ -1,4 +1,15 @@
-const projects = [
+interface Project {
+  id: number;
+  title: string;
+  sideTitle: string;
+  Introduction: string;
+  Role: string;
+  Impact: string;
+  Features: string;
+  Images: { title: string; image: string }[];
+}
+
+const projects: Project[] = [
   {
     id: 1,
     title: 'SEB Nexus',
@@ -9,17 +20,16 @@ const projects = [
     Impact:
       "My role has a profound impact on the platform by ensuring a cohesive and consistent user experience across all integrated products. I drive enhancements through UX research, wireframing, and prototyping, which leads to user-centered innovations and improvements. My adherence to SEB’s design guidelines ensures that all features meet high standards of quality and accessibility. Additionally, my collaborative efforts with UX designers, developers, and product teams foster effective alignment and integration, which enhances the overall functionality and user satisfaction of Nexus. This holistic approach contributes to maintaining Nexus as a unified, intuitive, and continuously evolving tool that effectively supports SEB's employees",
     Features:
-      'In my role, I have worked on several key features of Nexus. I contributed to the development of new  solutions, which allows advisors and service managers to help private and corporate customers and assist them with their banking errands. I worked on the admin tool, which allows developers and product owners to view and manage micro frontends (MFEs) across different channel environments and add new MFEs. I contributed to the customer selector feature, allowing internal users to efficiently search for private or corporate customers, streamlining the process of accessing customer information. Furthermore, I worked close to other UX designers and visual designers to create a smart and effective navigation through the external and internal channels in SEB.',
+      'In my role, I have worked on several key features of Nexus. I contributed to the development of new solutions, which allows advisors and service managers to help private and corporate customers and assist them with their banking errands. I worked on the admin tool, which allows developers and product owners to view and manage micro frontends (MFEs) across different channel environments and add new MFEs. I contributed to the customer selector feature, allowing internal users to efficiently search for private or corporate customers, streamlining the process of accessing customer information. Furthermore, I worked close to other UX designers and visual designers to create a smart and effective navigation through the external and internal channels in SEB.',
     Images: [
       {
         title: 'Admin tool',
-        image: '/case.jpg',
+        image: '/portfolio/case.jpg',
       },
       {
         title: 'Customer search',
-        image: '/case2.jpg',
+        image: '/portfolio/case2.jpg',
       },
-      ,
     ],
   },
 ];
