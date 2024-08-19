@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
-  weight: ['500', '700'],
+  weight: ['400', '500', '700'],
 });
 
 interface LinkItem {
@@ -108,9 +108,9 @@ const Navbar = () => {
             <li key={link.id} className={workSans.className}>
               <Link
                 href={link.url}
-                className={`p-1 px-3 rounded-sm transition-all duration-300 ease-in-out ${
+                className={`p-2 px-4 rounded-sm transition-all duration-300 ease-in-out ${
                   pathname === link.url
-                    ? 'outline outline-2 outline-[#3D56D9]'
+                    ? 'outline outline-2 outline-[#3D56D9] font-bold rounded-lg'
                     : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
                 }`}
               >
