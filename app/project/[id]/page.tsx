@@ -1,44 +1,55 @@
 import React from 'react';
 import projects from '../../utils/projects';
 import Image from 'next/image';
+import { spaceMono, workSans } from '../../../fonts/fonts';
 
 const page = ({ params }: { params: { id: string } }) => {
-  // Find the project object matching the URL ID
   const selectedProject = projects.find(
     (project) => project.id === parseInt(params.id)
   );
 
   if (!selectedProject) {
-    return <div>Project not found!</div>; // Handle case where ID doesn't exist
+    return <div>Project not found!</div>;
   }
 
-  // Access project data using selectedProject properties (e.g., selectedProject.Introduction)
   return (
-    <main className='flex flex-col gap-5 justify-center items-center mx-auto w-full lg:max-w-[774px] xl:max-w-[1196px]'>
-      <section className='text-center'>
-        <h1>{selectedProject.title}</h1>
-        <p>{selectedProject.sideTitle}</p>
+    <main
+      className={`flex flex-col gap-10 justify-center items-center mx-auto w-full lg:max-w-[774px] xl:max-w-[1196px] ${spaceMono.className} leading-5`}
+    >
+      <section className='text-center my-3'>
+        <h1 className='my-3 font-bold text-lg'>{selectedProject.title}</h1>
+        <p className={`text-base w-[271px] ${workSans.className}`}>
+          {selectedProject.sideTitle}
+        </p>
       </section>
-      <article>
+      <article className='flex flex-col gap-7 justify-center items-center px-2 text-[#3D56D9]'>
         <section>
-          <h2 className='my-2'>Introduction</h2>
-          <p>{selectedProject.Introduction}</p>
+          <h2 className='my-3 text-[20px] font-bold text-lg '>Introduction</h2>
+          <p className={`${workSans.className} text-black`}>
+            {selectedProject.Introduction}
+          </p>
         </section>
         <section>
-          <h2>My Role</h2>
-          <p>{selectedProject.Role}</p>
+          <h2 className='my-3 font-bold text-lg'>My Role</h2>
+          <p className={`${workSans.className} text-black`}>
+            {selectedProject.Role}
+          </p>
         </section>
         <section>
-          <h2>Impact</h2>
-          <p>{selectedProject.Impact}</p>
+          <h2 className='my-3 font-bold text-lg'>Impact</h2>
+          <p className={`${workSans.className} text-black`}>
+            {selectedProject.Impact}
+          </p>
         </section>
         <section>
-          <h2>Some of the features</h2>
-          <p>{selectedProject.Features}</p>
+          <h2 className='my-3 font-bold text-lg'>Some of the features</h2>
+          <p className={`${workSans.className} text-black`}>
+            {selectedProject.Features}
+          </p>
         </section>
-        <section>
-          <h2>Admin Tool</h2>
-          <figure>
+        <section className='lg:w-full'>
+          <h2 className='my-3 font-bold text-lg'>Admin Tool</h2>
+          <figure className='lg:flex lg:flex-col lg:justify-center lg:items-center'>
             <Image
               height={914}
               width={610}
@@ -47,9 +58,9 @@ const page = ({ params }: { params: { id: string } }) => {
             />
           </figure>
         </section>
-        <section>
-          <h2>Customer search</h2>
-          <figure>
+        <section className='lg:w-full'>
+          <h2 className='my-3 font-bold text-lg self-start'>Customer search</h2>
+          <figure className='lg:flex lg:flex-col lg:justify-center lg:items-center'>
             <Image
               height={914}
               width={610}
