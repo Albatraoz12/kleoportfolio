@@ -16,11 +16,17 @@ const page = ({ params }: { params: { id: string } }) => {
     <main
       className={`flex flex-col gap-10 justify-center items-center mx-auto w-full lg:max-w-[774px] xl:max-w-[1196px] ${spaceMono.className} leading-5`}
     >
-      <section className='text-center my-3'>
+      <section className='text-center my-3 flex flex-col justify-center items-center'>
         <h1 className='my-3 font-bold text-lg'>{selectedProject.title}</h1>
-        <p className={`text-base w-[271px] ${workSans.className}`}>
+        <p className={`text-base w-[271px] lg:w-[517px] ${workSans.className}`}>
           {selectedProject.sideTitle}
         </p>
+        <Image
+          height={914}
+          width={610}
+          src={selectedProject.introImg}
+          alt={selectedProject.title}
+        />
       </section>
       <article className='flex flex-col gap-7 justify-center items-center px-2 text-[#3D56D9]'>
         <section>

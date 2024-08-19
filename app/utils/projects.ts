@@ -1,6 +1,7 @@
 interface Project {
   id: number;
   title: string;
+  introImg: string;
   sideTitle: string;
   Introduction: string;
   Role: string;
@@ -13,6 +14,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'SEB Nexus',
+    introImg: '/portfolio/IntroCase.png',
     sideTitle: 'An innovative tool for the employees of SEB',
     Introduction:
       "Nexus is SEB's comprehensive, web-based internal tool designed to streamline and enhance the efficiency of various banking operations. By integrating seamlessly with all internal application tones, Nexus provides a unified platform that supports multiple internal teams across the bank. Its primary objective is to build common functions and provide consistent support to roles such as advisors and service managers, ensuring these tools are efficient and user-friendly. By centralizing these functions, Nexus aims to improve overall workflow, data accuracy, and customer service across SEB.",
