@@ -2,18 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.wrapper {
-  box-sizing: content-box;
-  display: flex;
+.animate-peek {
+  animation: peek 1s infinite;
 }
 
-.words {
-  overflow: hidden;
-  height: 20px;
-}
-
-.words span {
-  display: block;
-  height: 100%;
-  animation: 2s ease-in-out infinite spin_words;
+@keyframes peek {
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  95%,
+  100% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
 }
