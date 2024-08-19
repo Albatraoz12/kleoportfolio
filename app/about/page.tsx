@@ -1,4 +1,4 @@
-import { Work_Sans } from 'next/font/google';
+import { Space_Mono, Work_Sans } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,13 +7,20 @@ const workSans = Work_Sans({
   weight: ['400', '500', '700'],
 });
 
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['700', '400'],
+});
+
 export default function About() {
   return (
     <main
-      className={`flex flex-col w-full max-w-[1169px] mx-auto text-[#3D56D9] h-full p-4 md:p-0 lg:p-0 lg:w-[889px] ${workSans.className}`}
+      className={`flex flex-col w-full sm:w-[90%] max-w-[1169px] mx-auto text-[#3D56D9] h-full p-4 md:p-0 lg:p-0 lg:w-[889px] xl:max-w-[1196px] xl:w-full ${workSans.className}`}
     >
-      <div className='mb-16'>
-        <h1 className='text-start text-2xl mx-3'>About Me</h1>
+      <div className='mb-12'>
+        <h1 className={`text-start text-[28px] mx-3 ${spaceMono.className}`}>
+          About Me
+        </h1>
       </div>
       <section className='flex flex-col items-center gap-7 mb-20 md:h-[536px] md:flex-row justify-center md:gap-0 md:mx-3 lg:gap-10 lg:justify-between'>
         <figure className='flex-shrink-0 w-[255px] h-[375px] lg:w-full max-w-full md:max-w-[370px] lg:max-w-[470px] md:h-full lg:max-h-[536px]'>
@@ -26,7 +33,7 @@ export default function About() {
           />
         </figure>
         <article className='flex flex-col gap-6 md:gap-10 md:ml-5'>
-          <div className='lg:max-h-[626px] lg:max-w-[319px] overflow-hidden font-normal text-xl leading-7'>
+          <div className='lg:max-h-[626px] lg:max-w-[319px] xl:max-w-[100%] overflow-hidden font-normal text-xl leading-7'>
             <h2 className='my-3 mb-5'>Hello!</h2>
             <p>
               I am a UX/UI designer based in Stockholm. Passionate about
