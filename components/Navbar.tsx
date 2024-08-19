@@ -29,7 +29,7 @@ const Links: LinkItem[] = [
   {
     id: 3,
     name: 'My resume',
-    url: '/resume',
+    url: '/Kleopatra Emmanouil.pdf',
   },
 ];
 
@@ -89,7 +89,7 @@ const Navbar = () => {
             <li key={link.id} className={workSans.className}>
               <Link
                 href={link.url}
-                className={`text-lg font-medium  p-3 rounded-sm transition-all duration-300 ease-in-out ${
+                className={`text-lg font-medium  p-3 rounded-sm transition-all duration-75 ease ${
                   pathname === link.url
                     ? 'outline outline-2 outline-[#3D56D9]'
                     : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
@@ -106,16 +106,32 @@ const Navbar = () => {
         <ul className='flex items-center justify-center gap-4'>
           {Links.map((link) => (
             <li key={link.id} className={workSans.className}>
-              <Link
-                href={link.url}
-                className={`p-2 px-4 rounded-sm transition-all duration-300 ease-in-out ${
-                  pathname === link.url
-                    ? 'outline outline-2 outline-[#3D56D9] font-bold rounded-lg'
-                    : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
-                }`}
-              >
-                {link.name}
-              </Link>
+              {link.name === 'My resume' ? (
+                <a
+                  href={link.url}
+                  className={`p-2 px-4 rounded-sm transition-all duration-300 ease-in-out ${
+                    pathname === link.url
+                      ? 'outline outline-2 outline-[#3D56D9] font-bold rounded-lg'
+                      : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
+                  }`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  download
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  href={link.url}
+                  className={`p-2 px-4 rounded-sm transition-all duration-300 ease-in-out ${
+                    pathname === link.url
+                      ? 'outline outline-2 outline-[#3D56D9] font-bold rounded-lg'
+                      : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00]'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
