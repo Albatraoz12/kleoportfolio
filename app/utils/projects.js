@@ -1,6 +1,8 @@
-export const projects = [
+const projects = [
   {
     id: 1,
+    title: 'SEB Nexus',
+    sideTitle: 'An innovative tool for the employees of SEB',
     Introduction:
       "Nexus is SEB's comprehensive, web-based internal tool designed to streamline and enhance the efficiency of various banking operations. By integrating seamlessly with all internal application tones, Nexus provides a unified platform that supports multiple internal teams across the bank. Its primary objective is to build common functions and provide consistent support to roles such as advisors and service managers, ensuring these tools are efficient and user-friendly. By centralizing these functions, Nexus aims to improve overall workflow, data accuracy, and customer service across SEB.",
     Role: "As the UX Design Lead for Nexus, I ensure the cohesiveness of all products integrated into Nexus, maintaining a consistent design language across internal tools for advisors and service managers. My responsibilities include conducting UX research, presenting key findings for our stakeholders and the agile team, wireframing, prototyping, and user testing. I innovate within Nexus, creating or improving features based on user feedback. Utilizing Figma and motion design, I collaborate closely with other UX designers, visual designers, developers, product owners, and managers to align design efforts. My role is crucial in maintaining the consistency and quality of Nexus, ensuring all our micro frontends follow SEB's design guidelines and accessibility standards.",
@@ -21,3 +23,5 @@ export const projects = [
     ],
   },
 ];
+
+export default projects;
