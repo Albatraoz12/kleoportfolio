@@ -1,6 +1,8 @@
+'use client';
 import { Space_Mono } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -8,26 +10,46 @@ const spaceMono = Space_Mono({
 });
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const wordsL: any[] = [
+    {
+      title: 'research',
+      color: 'text-[blue]',
+    },
+    {
+      title: 'wireframe',
+      color: 'text-[red]',
+    },
+    {
+      title: 'prototype',
+      color: 'text-[green]',
+    },
+    {
+      title: 'user test',
+      color: 'text-[orange]',
+    },
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % wordsL.length);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <main
       className={`flex justify-center items-center flex-col mt-10 gap-8 ${spaceMono.className}`}
     >
-      <section className='wrapper font-bold text-[#3D56D9] text-[26px] h-[50px] flex gap-3'>
-        <h2>Hello! I’m Kleopatra, I</h2>
-        <div className='overflow-hidden'>
-          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
-            user test
-          </span>
-          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
-            prototype
-          </span>
-          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
-            wireframe
-          </span>
-          <span className='block h-full pl-2 text-blue-500 animate-spinWords'>
-            research
-          </span>
-        </div>
+      <section className='font-bold text-[#3D56D9] text-center text-[16px] lg:text-[26px] h-[50px] flex justify-center flex-wrap items-center'>
+        <h1>Hello! I'm Kleopatra, I</h1>
+        <span
+          className={`animate-peek w-[150px] md:w-[150px] md:text-start md:ml-3 font-extrabold text-[16px] lg:text-[26px] ${spaceMono.className} ${wordsL[currentIndex].color}`}
+          key={currentIndex}
+        >
+          {wordsL[currentIndex].title}
+        </span>
       </section>
       <section>
         <Link href='/project/1'>
