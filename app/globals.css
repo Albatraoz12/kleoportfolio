@@ -6,6 +6,12 @@
   animation: peek 1s infinite;
 }
 
+@media (min-width: 425px) {
+  .animation-text {
+    width: 350px;
+  }
+}
+
 @keyframes peek {
   0% {
     transform: translateY(5px);
