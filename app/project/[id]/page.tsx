@@ -14,11 +14,15 @@ const page = ({ params }: { params: { id: string } }) => {
 
   return (
     <main
-      className={`flex flex-col gap-10 justify-center items-center mx-auto w-full lg:max-w-[774px] xl:max-w-[1196px] ${spaceMono.className} leading-5`}
+      className={`flex flex-col gap-7 justify-center items-center mx-auto w-full lg:max-w-[774px] xl:max-w-[1196px] ${spaceMono.className} leading-5`}
     >
       <section className='text-center my-3 flex flex-col justify-center items-center'>
-        <h1 className='my-3 font-bold text-lg'>{selectedProject.title}</h1>
-        <p className={`text-base w-[271px] lg:w-[517px] ${workSans.className}`}>
+        <h1 className='my-3 font-bold text-[20px] lg:text-[28px]'>
+          {selectedProject.title}
+        </h1>
+        <p
+          className={`text-base font-normal my-4 w-[271px] lg:w-[517px] xl:w-[600px] ${workSans.className} lg:text-[24px]`}
+        >
           {selectedProject.sideTitle}
         </p>
         <Image
@@ -28,33 +32,35 @@ const page = ({ params }: { params: { id: string } }) => {
           alt={selectedProject.title}
         />
       </section>
-      <article className='flex flex-col gap-7 justify-center items-center px-2 text-[#3D56D9]'>
+      <article className='flex flex-col gap-20 justify-center items-center px-2 text-[#3D56D9]'>
         <section>
-          <h2 className='my-3 text-[20px] font-bold text-lg '>Introduction</h2>
-          <p className={`${workSans.className} text-black`}>
+          <h2 className='my-3 text-[20px] font-bold lg:text-xl mb-10'>
+            Introduction
+          </h2>
+          <p className={`${workSans.className} text-black text-lg`}>
             {selectedProject.Introduction}
           </p>
         </section>
         <section>
-          <h2 className='my-3 font-bold text-lg'>My Role</h2>
-          <p className={`${workSans.className} text-black`}>
+          <h2 className='my-3 text-xl mb-10 font-bold'>My Role</h2>
+          <p className={`${workSans.className} text-black text-lg`}>
             {selectedProject.Role}
           </p>
         </section>
         <section>
-          <h2 className='my-3 font-bold text-lg'>Impact</h2>
-          <p className={`${workSans.className} text-black`}>
+          <h2 className='my-3 font-bold text-xl mb-10'>Impact</h2>
+          <p className={`${workSans.className} text-black text-lg`}>
             {selectedProject.Impact}
           </p>
         </section>
         <section>
-          <h2 className='my-3 font-bold text-lg'>Some of the features</h2>
-          <p className={`${workSans.className} text-black`}>
+          <h2 className='my-3 font-bold text-xl mb-10'>Some of the features</h2>
+          <p className={`${workSans.className} text-black text-lg`}>
             {selectedProject.Features}
           </p>
         </section>
         <section className='lg:w-full'>
-          <h2 className='my-3 font-bold text-lg'>Admin Tool</h2>
+          <h2 className='my-3 font-bold text-xl mb-10'>Admin Tool</h2>
           <figure className='lg:flex lg:flex-col lg:justify-center lg:items-center'>
             <Image
               height={914}
@@ -65,7 +71,9 @@ const page = ({ params }: { params: { id: string } }) => {
           </figure>
         </section>
         <section className='lg:w-full'>
-          <h2 className='my-3 font-bold text-lg self-start'>Customer search</h2>
+          <h2 className='my-3 font-bold text-xl self-start mb-10'>
+            Customer search
+          </h2>
           <figure className='lg:flex lg:flex-col lg:justify-center lg:items-center'>
             <Image
               height={914}
