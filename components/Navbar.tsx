@@ -109,7 +109,7 @@ const Navbar = () => {
               {link.name === 'My resume' ? (
                 <a
                   href={link.url}
-                  className={`p-1 px-5 rounded-lg transition-all duration-300 ease-in-out ${
+                  className={`p-2 px-5 rounded-sm transition-all duration-300 ease-in-out ${
                     pathname === link.url
                       ? 'outline outline-2 outline-[#3D56D9] font-bold rounded-lg'
                       : 'outline-none hover:outline-1 hover:outline-[#C76B00] hover:text-[#C76B00] hover:font-bold'
