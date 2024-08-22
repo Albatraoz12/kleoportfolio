@@ -11,6 +11,11 @@
     width: 350px;
   }
 }
+@media (min-width: 375px) {
+  .animation-text {
+    width: 350px;
+  }
+}
 
 @keyframes peek {
   0% {
