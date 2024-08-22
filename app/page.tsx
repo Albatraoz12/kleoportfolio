@@ -42,10 +42,10 @@ export default function Home() {
     <main
       className={`flex justify-center items-center flex-col mt-10 gap-8 ${spaceMono.className}`}
     >
-      <section className='font-bold animation-text md:w-[auto] lg:w-[auto] text-[#3D56D9] text-center text-[16px] lg:text-[26px] h-[50px] flex justify-center flex-wrap items-center'>
+      <section className='font-bold animation-text md:w-[auto] lg:w-[auto] text-[#3D56D9] text-center text-[16px] md:text-[26px] lg:text-[26px] h-[50px] flex justify-center flex-wrap items-center'>
         <h1>Hello! I'm Kleopatra, I</h1>
         <span
-          className={`animate-peek w-[150px] md:w-[150px] md:text-start md:ml-3 font-extrabold text-[16px] lg:text-[26px] ${spaceMono.className} ${wordsL[currentIndex].color}`}
+          className={`animate-peek w-[150px] md:w-[150px] md:text-start md:ml-3 font-extrabold text-[16px] md:text-[26px]  lg:text-[26px] ${spaceMono.className} ${wordsL[currentIndex].color}`}
           key={currentIndex}
         >
           {wordsL[currentIndex].title}
